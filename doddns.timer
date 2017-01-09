@@ -1,0 +1,10 @@
+[Unit]
+Description=Run doddns every 2 minutes
+
+[Timer]
+OnCalendar=*:0/2
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
