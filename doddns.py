@@ -36,6 +36,7 @@ class DigitalOceanApi(object):
             },
             params=params,
             data=json.dumps(data),
+            timeout=10,
         )
 
         return req.json()
