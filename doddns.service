@@ -3,4 +3,5 @@ Description=Updates ddns information for <domain>
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/python3 /opt/doddns/doddns.py <api_key> <domain> <record>
+EnvironmentFile=-/etc/sysconfig/doddns
+ExecStart=/usr/bin/python3 /opt/doddns/doddns.py $APIKEY $DOMAIN $RECORD
